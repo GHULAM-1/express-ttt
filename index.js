@@ -6,7 +6,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Adjust this if your React app is running on a different port
+    origin: [
+      "https://next-ttt.onrender.com/",
+      "https://next-ttt-phi.vercel.app/",
+    ],
+    // Adjust this if your React app is running on a different port
     methods: ["GET", "POST"],
   },
 });
